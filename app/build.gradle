@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.chatserver'
+version = '1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_23
+    targetCompatibility = JavaVersion.VERSION_23
+}
+
+application {
+    mainClass = 'com.chatserver.prog.conc.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-websocket:3.2.5'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.2.5'
+    implementation 'io.micrometer:micrometer-core:1.12.5'
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+}
