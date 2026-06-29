@@ -25,3 +25,8 @@ dependencies {
     implementation 'io.micrometer:micrometer-core:1.12.5'
     implementation 'ch.qos.logback:logback-classic:1.4.14'
 }
+
+tasks.register('runLoadTest', JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.chatserver.test.LoadTestClient'
+}
